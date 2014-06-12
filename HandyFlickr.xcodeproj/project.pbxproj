@@ -19,6 +19,15 @@
 		68B7117018C5A8FE0046EED8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B7115818C5A8FD0046EED8 /* UIKit.framework */; };
 		68B7117818C5A8FE0046EED8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68B7117618C5A8FE0046EED8 /* InfoPlist.strings */; };
 		68B7117A18C5A8FE0046EED8 /* HandyFlickrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B7117918C5A8FE0046EED8 /* HandyFlickrTests.m */; };
+		68B7118418C5AA070046EED8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7118318C5AA070046EED8 /* Storyboard.storyboard */; };
+		68B7118718C5AA530046EED8 /* HandyFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B7118618C5AA530046EED8 /* HandyFlickrViewController.m */; };
+		68B7118A18C5AB660046EED8 /* UICommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B7118918C5AB660046EED8 /* UICommonUtility.m */; };
+		68B7118D18C5B1C40046EED8 /* FlickrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B7118C18C5B1C40046EED8 /* FlickrManager.m */; };
+		68B7119B18C5B6410046EED8 /* libFlickrKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B7119618C5B6050046EED8 /* libFlickrKit.a */; };
+		68B7119D18C5B68D0046EED8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B7119C18C5B68D0046EED8 /* SystemConfiguration.framework */; };
+		68B711A118C5BBB70046EED8 /* FKAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B7119F18C5BBB70046EED8 /* FKAuthViewController.m */; };
+		68B711A218C5BBB70046EED8 /* FKAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B711A018C5BBB70046EED8 /* FKAuthViewController.xib */; };
+		68B711A518C5C1450046EED8 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B711A418C5C1440046EED8 /* PhotoCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +37,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 68B7115018C5A8FD0046EED8;
 			remoteInfo = HandyFlickr;
+		};
+		68B7119518C5B6050046EED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B7119018C5B6040046EED8 /* FlickrKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 552D918C1753F8EF00BE3FEA;
+			remoteInfo = FlickrKit;
+		};
+		68B7119718C5B6050046EED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B7119018C5B6040046EED8 /* FlickrKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 552D919A1753F8F000BE3FEA;
+			remoteInfo = FlickrKitTests;
+		};
+		68B7119918C5B6230046EED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B7119018C5B6040046EED8 /* FlickrKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 552D918B1753F8EF00BE3FEA;
+			remoteInfo = FlickrKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,6 +78,20 @@
 		68B7117518C5A8FE0046EED8 /* HandyFlickrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HandyFlickrTests-Info.plist"; sourceTree = "<group>"; };
 		68B7117718C5A8FE0046EED8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68B7117918C5A8FE0046EED8 /* HandyFlickrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandyFlickrTests.m; sourceTree = "<group>"; };
+		68B7118318C5AA070046EED8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		68B7118518C5AA530046EED8 /* HandyFlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyFlickrViewController.h; sourceTree = SOURCE_ROOT; };
+		68B7118618C5AA530046EED8 /* HandyFlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyFlickrViewController.m; sourceTree = SOURCE_ROOT; };
+		68B7118818C5AB660046EED8 /* UICommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICommonUtility.h; sourceTree = "<group>"; };
+		68B7118918C5AB660046EED8 /* UICommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICommonUtility.m; sourceTree = "<group>"; };
+		68B7118B18C5B1C40046EED8 /* FlickrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrManager.h; sourceTree = "<group>"; };
+		68B7118C18C5B1C40046EED8 /* FlickrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrManager.m; sourceTree = "<group>"; };
+		68B7119018C5B6040046EED8 /* FlickrKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlickrKit.xcodeproj; path = FlickrKit/FlickrKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		68B7119C18C5B68D0046EED8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		68B7119E18C5BBB60046EED8 /* FKAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FKAuthViewController.h; path = FlickrKit/DemoProject/FlickrKitDemo/FlickrKitDemo/FKAuthViewController.h; sourceTree = SOURCE_ROOT; };
+		68B7119F18C5BBB70046EED8 /* FKAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FKAuthViewController.m; path = FlickrKit/DemoProject/FlickrKitDemo/FlickrKitDemo/FKAuthViewController.m; sourceTree = SOURCE_ROOT; };
+		68B711A018C5BBB70046EED8 /* FKAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FKAuthViewController.xib; path = FlickrKit/DemoProject/FlickrKitDemo/FlickrKitDemo/FKAuthViewController.xib; sourceTree = SOURCE_ROOT; };
+		68B711A318C5C1440046EED8 /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionCell.h; sourceTree = "<group>"; };
+		68B711A418C5C1440046EED8 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B7119D18C5B68D0046EED8 /* SystemConfiguration.framework in Frameworks */,
+				68B7119B18C5B6410046EED8 /* libFlickrKit.a in Frameworks */,
 				68B7115718C5A8FD0046EED8 /* CoreGraphics.framework in Frameworks */,
 				68B7115918C5A8FD0046EED8 /* UIKit.framework in Frameworks */,
 				68B7115518C5A8FD0046EED8 /* Foundation.framework in Frameworks */,
@@ -78,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				68B7115A18C5A8FD0046EED8 /* HandyFlickr */,
+				68B7118F18C5B5F90046EED8 /* 3rd Party */,
 				68B7117318C5A8FE0046EED8 /* HandyFlickrTests */,
 				68B7115318C5A8FD0046EED8 /* Frameworks */,
 				68B7115218C5A8FD0046EED8 /* Products */,
@@ -96,6 +143,7 @@
 		68B7115318C5A8FD0046EED8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68B7119C18C5B68D0046EED8 /* SystemConfiguration.framework */,
 				68B7115418C5A8FD0046EED8 /* Foundation.framework */,
 				68B7115618C5A8FD0046EED8 /* CoreGraphics.framework */,
 				68B7115818C5A8FD0046EED8 /* UIKit.framework */,
@@ -107,8 +155,17 @@
 		68B7115A18C5A8FD0046EED8 /* HandyFlickr */ = {
 			isa = PBXGroup;
 			children = (
+				68B7118318C5AA070046EED8 /* Storyboard.storyboard */,
 				68B7116318C5A8FD0046EED8 /* AppDelegate.h */,
 				68B7116418C5A8FD0046EED8 /* AppDelegate.m */,
+				68B7118518C5AA530046EED8 /* HandyFlickrViewController.h */,
+				68B7118618C5AA530046EED8 /* HandyFlickrViewController.m */,
+				68B711A318C5C1440046EED8 /* PhotoCollectionCell.h */,
+				68B711A418C5C1440046EED8 /* PhotoCollectionCell.m */,
+				68B7118818C5AB660046EED8 /* UICommonUtility.h */,
+				68B7118918C5AB660046EED8 /* UICommonUtility.m */,
+				68B7118B18C5B1C40046EED8 /* FlickrManager.h */,
+				68B7118C18C5B1C40046EED8 /* FlickrManager.m */,
 				68B7116618C5A8FD0046EED8 /* Images.xcassets */,
 				68B7115B18C5A8FD0046EED8 /* Supporting Files */,
 			);
@@ -144,6 +201,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68B7118F18C5B5F90046EED8 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				68B7119E18C5BBB60046EED8 /* FKAuthViewController.h */,
+				68B7119F18C5BBB70046EED8 /* FKAuthViewController.m */,
+				68B711A018C5BBB70046EED8 /* FKAuthViewController.xib */,
+				68B7119018C5B6040046EED8 /* FlickrKit.xcodeproj */,
+			);
+			name = "3rd Party";
+			path = HandyFlickr;
+			sourceTree = "<group>";
+		};
+		68B7119118C5B6040046EED8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68B7119618C5B6050046EED8 /* libFlickrKit.a */,
+				68B7119818C5B6050046EED8 /* FlickrKitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +236,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				68B7119A18C5B6230046EED8 /* PBXTargetDependency */,
 			);
 			name = HandyFlickr;
 			productName = HandyFlickr;
@@ -206,6 +285,12 @@
 			mainGroup = 68B7114818C5A8FD0046EED8;
 			productRefGroup = 68B7115218C5A8FD0046EED8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 68B7119118C5B6040046EED8 /* Products */;
+					ProjectRef = 68B7119018C5B6040046EED8 /* FlickrKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				68B7115018C5A8FD0046EED8 /* HandyFlickr */,
@@ -214,6 +299,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		68B7119618C5B6050046EED8 /* libFlickrKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFlickrKit.a;
+			remoteRef = 68B7119518C5B6050046EED8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		68B7119818C5B6050046EED8 /* FlickrKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FlickrKitTests.octest;
+			remoteRef = 68B7119718C5B6050046EED8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		68B7114F18C5A8FD0046EED8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -221,6 +323,8 @@
 			files = (
 				68B7115F18C5A8FD0046EED8 /* InfoPlist.strings in Resources */,
 				68B7116718C5A8FD0046EED8 /* Images.xcassets in Resources */,
+				68B7118418C5AA070046EED8 /* Storyboard.storyboard in Resources */,
+				68B711A218C5BBB70046EED8 /* FKAuthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +345,11 @@
 			files = (
 				68B7116518C5A8FD0046EED8 /* AppDelegate.m in Sources */,
 				68B7116118C5A8FD0046EED8 /* main.m in Sources */,
+				68B7118D18C5B1C40046EED8 /* FlickrManager.m in Sources */,
+				68B7118718C5AA530046EED8 /* HandyFlickrViewController.m in Sources */,
+				68B7118A18C5AB660046EED8 /* UICommonUtility.m in Sources */,
+				68B711A118C5BBB70046EED8 /* FKAuthViewController.m in Sources */,
+				68B711A518C5C1450046EED8 /* PhotoCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +368,11 @@
 			isa = PBXTargetDependency;
 			target = 68B7115018C5A8FD0046EED8 /* HandyFlickr */;
 			targetProxy = 68B7117118C5A8FE0046EED8 /* PBXContainerItemProxy */;
+		};
+		68B7119A18C5B6230046EED8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlickrKit;
+			targetProxy = 68B7119918C5B6230046EED8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -363,6 +477,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HandyFlickr/HandyFlickr-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/FlickrKit/**",
+				);
 				INFOPLIST_FILE = "HandyFlickr/HandyFlickr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -376,6 +495,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HandyFlickr/HandyFlickr-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/FlickrKit/**",
+				);
 				INFOPLIST_FILE = "HandyFlickr/HandyFlickr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -443,6 +567,7 @@
 				68B7117F18C5A8FE0046EED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68B7118018C5A8FE0046EED8 /* Build configuration list for PBXNativeTarget "HandyFlickrTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +576,7 @@
 				68B7118218C5A8FE0046EED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
