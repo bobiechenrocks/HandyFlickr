@@ -110,7 +110,7 @@ NSString* kstrAPISecret = @"5cdce9bf3e026d33";
 			} else {
                 
 //				[self doSilentLogin];
-                [self doSilentFetch];
+                [self doSilentFetch2];
                 
 			}
         });
@@ -141,6 +141,63 @@ NSString* kstrAPISecret = @"5cdce9bf3e026d33";
             [self.navigationController popViewControllerAnimated:YES];
 		});
 	}];
+}
+
+- (void)doSilentFetch2
+{
+    NSString* strKeyword = @"puppy";
+    FlickrManager* flickrManager = [FlickrManager sharedFlickrManager];
+    if (flickrManager) {
+        
+        [flickrManager fetchNearByWithKeyword:strKeyword completion:^(NSError *error, NSArray *arrayResult) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.loadingIndicator stopAnimating];
+                
+                if (!error)
+                {
+                    if (!self.arrayPhotoURL)
+                    {
+                        self.arrayPhotoURL = [NSMutableArray arrayWithCapacity:0];
+                    }
+                    [self.arrayPhotoURL removeAllObjects];
+                    
+                    if (!self.arrayMediumPhotoURL)
+                    {
+                        self.arrayMediumPhotoURL = [NSMutableArray arrayWithCapacity:0];
+                    }
+                    [self.arrayMediumPhotoURL removeAllObjects];
+                    
+                    for (NSDictionary* dictPhoto in arrayResult)
+                    {
+                        //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
+                        NSString* strFarmId = [dictPhoto objectForKey:@"farm"];
+                        NSString* strServerId = [dictPhoto objectForKey:@"server"];
+                        NSString* strId = [dictPhoto objectForKey:@"id"];
+                        NSString* strSecret = [dictPhoto objectForKey:@"secret"];
+                        NSString* strSizeThumbnail = @"q";
+                        NSString* strSizeNormal = @"b";
+                        NSString* strPhotoURLThumbnail = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_%@.jpg", strFarmId, strServerId, strId, strSecret, strSizeThumbnail];
+                        NSString* strPhotoURLNormal = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_%@.jpg", strFarmId, strServerId, strId, strSecret, strSizeNormal];
+                        
+                        [self.arrayPhotoURL addObject:[NSURL URLWithString:strPhotoURLThumbnail]];
+                        [self.arrayMediumPhotoURL addObject:[NSURL URLWithString:strPhotoURLNormal]];
+                    }
+                    
+                    [self doneFetch];
+                }
+                else
+                {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                    [alert show];
+                }
+                
+            });
+            
+        }];
+        
+    }
 }
 
 - (void)doSilentFetch
